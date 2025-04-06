@@ -1,0 +1,256 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family:'Times New Roman', Times, serif;
+    line-height: 2;
+    background-color: rgba(237, 187, 0, 0.5);
+  }
+
+  /* Header */
+
+  header {
+    background-color: #0b2961;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  header h4 {
+    font-size: 1rem;
+    font-style: italic;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+
+  .logo_container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+  }
+
+  /* Meniu */
+
+  .meniu {
+    background-color: #b10505;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .meniu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .meniu ul li {
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  .meniu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    display: block;
+  }
+
+  .meniu ul li a:hover {
+    color: #EDBB00;
+  }
+
+  .meniu ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #b10505;
+    padding: 0.5rem;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .meniu ul li:hover ul {
+    display: block;
+  }
+
+  .meniu ul li ul li {
+    margin: 0.5rem 0;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section { 
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  h2 {
+    color: #0b2961;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #ce0000;
+    transition: width 0.3s ease;
+  }
+
+  h2:hover::after {
+    width: 100%;
+  }
+
+    /*Audio*/ 
+
+    .audio_player {
+        background-color: #b10505;
+        border: 3px solid #EDBB00;
+        padding: 13px;
+        border-radius: 10px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 13vh;
+        margin: 20px auto;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+    audio {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+    }
+
+    audio::-webkit-media-controls-panel {
+    background-color: #0b2961;
+    color: #EDBB00;
+    border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button {
+    opacity: 100%;
+    background-color: #EDBB00;
+    border: none;
+    border-radius: 50%;
+    color: #b10505;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+    
+    color: #EDBB00;
+    opacity: 100%;
+    }
+
+    /* Versuri */
+
+    .versuri h3, p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /*align-items: flex-start;*/
+        min-height: 5px;
+    }
+
+    /* Trofee */
+
+    .galerie_trofee {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .trofeu {
+        text-align: center;
+        margin: 1rem;
+        transition: transform 0.3s ease;
+    }
+
+    /* Stadium */
+
+    .info_stadion {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .imag_stadion {
+        flex: 1 1 300px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .detalii_stadion {
+        flex: 1 1 300px;
+    }
+
+    .detalii_stadion ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .detalii_stadion li {
+        margin-bottom: 0.5rem;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .detalii_stadion li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #b10505;
+    }
